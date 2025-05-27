@@ -1,0 +1,538 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0.5rem 2rem;
+  padding-top: 1rem;;
+  padding-bottom: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar > img{
+    width: 250px;
+    height: 50px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+
+
+.login-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.jobseeker {
+  background: #e0ecff;
+  color: #0056d2;
+  border: none;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  font-weight:550;
+  cursor: pointer;
+}
+
+.employer {
+  background: #ff8000;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  font-weight:550;
+  cursor: pointer;
+}
+
+.banner {
+  background: linear-gradient(to right, #1a5c93, #00ccff);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.banner p{
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    animation-name:welcome ;
+    animation-duration: 4s ;
+    animation-iteration-count: infinite;
+}
+
+@keyframes welcome {
+  from {color: rgb(255, 255, 255);}
+  to {color: #fcdb7a}
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+ 
+}
+
+.cta-buttons button {
+  padding: 1rem;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cta-buttons button:hover{
+    color: #333;
+    background-color: #ffc107;
+}
+
+.search-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color:#eaeaea4d;
+}
+
+.search-bar {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  width: 250px;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-btn {
+  padding: 13px;
+  background: #ffc107;
+  border: none;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.job-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.job-buttons button {
+  padding: 0.7rem 1rem;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dark-blue{
+    background: #01203a;
+    color: white;
+}
+
+.orange {
+  background: orange;
+  color: white;
+}
+
+.tags {
+  padding: 1rem;
+  background: rgba(241, 252, 250);
+  text-align: center;
+  box-shadow: 0 2px 10px rgb(219, 215, 215);
+   
+}
+
+.tags span {
+  background: #ffffff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.featured-jobs {
+  padding: 1rem;
+  text-align: center;
+}
+
+.job-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.job-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.badge {
+  background: gold;
+  font-size: 12px;
+  padding: 5px 6px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Bottom Navbar for Mobile */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav a span {
+  font-size: 18px;
+}
+
+.bottom-nav a small {
+  font-size: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .top-bar {
+    flex-direction:column;
+
+    align-items:center;
+  }
+
+  .login-buttons {
+    margin-top: 5px;
+    align-items:center;
+    display: flex;}
+
+    nav{
+        display: none;
+    }
+
+  }
+
+  @media (min-width: 1024px){
+    .bottom-nav{
+        display: none;
+    }
+  }
+
+.featured-employers {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.employer-slider {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll-employers 40s linear infinite;
+}
+
+.employer-logo > img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll-employers {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+    .app-promo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-top: 2px solid #dbeafe;
+    }
+
+    .app-content {
+      max-width: 400px;
+    }
+
+    .app-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #1e40af;
+    }
+
+    .app-content p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .app-buttons img {
+      height: 48px;
+      margin-right: 10px;
+    }
+
+    .app-image img {
+      max-width: 300px;
+      margin-bottom:0px ;
+    }
+
+    .job-locations {
+      display:flex;
+      gap: 30px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .job-locations-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  background-color: rgb(219, 239, 254);
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  
+}
+
+.job-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.job-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.job-box p {
+  color: #444;
+  line-height: 1.6;
+  word-spacing: 15px;
+}
+
+
+ .job-locations h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .job-locations > p {
+      margin: 10px ;
+      font-size: 14px;
+      color: #1f2937;
+      
+    }
+
+
+    .job-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background: #f0f9ff;
+      padding: 40px 20px;
+    }
+
+    .stat-box {
+      text-align: center;
+      margin: 15px;
+      min-width: 140px;
+    }
+
+    .stat-box h4 {
+      font-size: 16px;
+      color: #374151;
+      margin-bottom: 5px;
+    }
+
+    .stat-num {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1d4ed8;
+    }
+
+    .site-footer {
+  background: #e9f7ff;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.disclaimer {
+  flex: 2;
+  max-width: 60ch;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.fa-facebook {
+  background: #020e28;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.fa-twitter {
+ background: #020e28;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+
+}
+
+.fa-instagram {
+  background: #020e28;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #020e28;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.fa-youtube{
+     background: #020e28;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+@media (max-width: 1024px){
+  .whatsapp-float {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 1000;
+}
+}
